@@ -1,0 +1,26 @@
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+$c-dark-grey: #707070;
+$c-light-grey: #edeff0;
+$c-red: #bc204b;
+$c-black: #333;
+$c-white: #fff;
+
+$c-success: #dff3df;
+$c-success-dark: darken($c-success, 50%);
+$c-error: #f7dfdf;
+$c-error-dark: darken($c-error, 50%);
+$c-warning: #fffbe8;
+$c-warning-dark: darken($c-warning, 50%);
+$c-info: #e4eded;
+$c-info-dark: darken($c-info, 50%);
+
+$lato: "Lato", sans-serif;
+$apex: "ApexMedium", sans-serif;
+$apexBook: "ApexBook", sans-serif;
+
+:root {
+  --max-width: 1440px;
+  --container-x-padding: 14rem;
+}

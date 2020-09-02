@@ -1,0 +1,11 @@
+@import "styles/variables.scss";
+
+a {
+  color: $c-dark-grey;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}

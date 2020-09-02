@@ -1,0 +1,24 @@
+{
+  "name": "empatica-ci",
+  "version": "1.0.0",
+  "description": "create-react-app with a custom Node API on Heroku",
+  "engines": {
+    "node": "14.4.0"
+  },
+  "scripts": {
+    "start": "node server",
+    "build": "cd react-ui/ && yarn && yarn build",
+    "test": "cd react-ui/ && yarn test",
+    "lint:ci": "cd react-ui/ && yarn && yarn lint"
+  },
+  "author": "",
+  "license": "ISC",
+  "cacheDirectories": [
+    "node_modules",
+    "react-ui/node_modules"
+  ],
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.3"
+  }
+}

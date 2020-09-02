@@ -1,0 +1,83 @@
+@mixin mobile {
+  @media (max-width: #{$tablet-width - 1}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin after-tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+.mobile-visible {
+  @include after-tablet() {
+    display: none;
+  }
+}
+
+.mobile-hidden {
+  @include mobile() {
+    display: none;
+  }
+}
+
+@mixin close-icon {
+  cursor: pointer;
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 0;
+  background: none;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px; /* cross thickness */
+    background-color: $c-dark-grey;
+    right: 0;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    &::before,
+    &::after {
+      background-color: $c-black;
+    }
+  }
+}
+
+@mixin checkmark-icon($size: 0.5rem, $color: darken($c-success, 50%)) {
+  display: inline-block;
+  transform: rotate(45deg);
+  height: calc(#{$size} * 3);
+  width: calc(#{$size} * 2);
+  border-bottom: #{$size} solid $color;
+  border-right: #{$size} solid $color;
+}

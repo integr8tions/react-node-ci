@@ -1,0 +1,19 @@
+@import "styles/index.scss";
+
+.login {
+  flex-grow: 1;
+
+  img {
+    min-height: 100%;
+  }
+
+  .btn {
+    width: 40rem;
+    max-width: 100%;
+  }
+
+  .container {
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,60 @@
+@import "styles/index.scss";
+
+:root {
+  --button-bg: #{$c-red};
+  --button-color: #{$c-white};
+  --button-border-color: var(--button-bg);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6em 1.8em;
+  min-width: 4rem;
+  background: var(--button-bg);
+  color: var(--button-color);
+  border: 2px solid var(--button-border-color);
+  border-radius: 4px;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:focus {
+    --button-bg: #{$c-white};
+    --button-color: #{$c-red};
+    text-decoration: none;
+  }
+}
+
+.btn-secondary,
+.btn-hollow {
+  --button-bg: transparent;
+  --button-border-color: #{$c-white};
+  padding: 0.6em 2.8em;
+
+  &:hover,
+  &:focus {
+    --button-color: #{$c-dark-grey};
+  }
+}
+
+.btn-hollow {
+  --button-color: #{$c-red};
+  --button-border-color: #{$c-red};
+}
+
+.btn-link {
+  color: #{$c-red};
+  border: none;
+  background: none;
+  min-width: 0;
+
+  &:focus,
+  &:hover {
+    border: none;
+    text-decoration: underline;
+    outline: none;
+  }
+}

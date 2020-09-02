@@ -1,0 +1,20 @@
+@import "styles/index.scss";
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+}
+.content {
+  flex-grow: 1;
+  display: flex;
+  z-index: 0;
+  background: $c-light-grey;
+  flex-direction: column;
+  justify-content: space-between;
+
+  > div {
+    width: 100%;
+  }
+}

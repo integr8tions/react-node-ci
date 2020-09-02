@@ -1,0 +1,80 @@
+@import "../../styles/index.scss";
+
+.promo {
+  padding-top: 4.5rem;
+  padding-bottom: 3rem;
+
+  @include after-tablet {
+    padding-top: 6rem;
+    padding-bottom: 7.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  h2,
+  p {
+    @include mobile {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+
+  h2 {
+    @include after-tablet {
+      margin-top: 4rem;
+      letter-spacing: -1px;
+    }
+  }
+
+  p {
+    line-height: 1.4em;
+
+    @include after-tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  .logo {
+    max-width: 240px;
+
+    @include mobile {
+      margin: auto;
+    }
+
+    @include after-tablet {
+      max-width: 330px;
+    }
+  }
+
+  .embrace {
+    img {
+      max-width: calc(100% - 6rem);
+    }
+
+    @include after-tablet {
+      margin-left: 4rem;
+      height: 100%;
+    }
+  }
+
+  .btn,
+  div + div {
+    margin-top: 4rem;
+  }
+
+  div {
+    .btn {
+      @include mobile {
+        display: none;
+      }
+    }
+
+    @include after-tablet {
+      width: 50%;
+
+      & + .btn {
+        display: none;
+      }
+    }
+  }
+}

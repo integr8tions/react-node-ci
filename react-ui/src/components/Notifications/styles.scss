@@ -1,0 +1,77 @@
+@import "styles/index.scss";
+
+.notification-container {
+  font-size: 1.4rem;
+  box-sizing: border-box;
+  position: fixed;
+  position: fixed;
+  z-index: 999999;
+}
+
+.top-right {
+  top: 8rem;
+  right: 1rem;
+  transition: transform 0.6s ease-in-out;
+  animation: toast-in-right 0.7s;
+
+  .top-right {
+    top: 1rem;
+  }
+}
+
+.notification {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $c-white;
+  color: $c-black;
+  transition: 0.3s ease;
+  position: relative;
+  pointer-events: auto;
+  margin: 0 0 1rem;
+  padding: 2rem;
+  width: 30rem;
+  border-radius: 4px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.success {
+  background: $c-success;
+  border: 1px solid darken($c-success, 40%);
+}
+
+.warning {
+  background: $c-warning;
+  border: 1px solid darken($c-warning, 40%);
+}
+
+.error {
+  background: $c-error;
+  border: 1px solid darken($c-error, 40%);
+}
+
+.notification-message {
+  text-align: left;
+}
+
+.notification-container {
+  button {
+    @include close-icon;
+
+    span {
+      display: none;
+    }
+  }
+}
+
+@keyframes toast-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

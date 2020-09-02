@@ -1,0 +1,22 @@
+@import "styles/index.scss";
+
+header {
+  border-bottom: 1px solid $c-light-grey;
+
+  .container {
+    display: flex;
+    height: 8rem;
+    align-items: center;
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+
+  img {
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    max-height: 6rem;
+  }
+}

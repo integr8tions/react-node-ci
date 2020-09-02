@@ -1,0 +1,22 @@
+@import "styles/index.scss";
+
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @include after-tablet {
+    text-align: left;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.x-paddings {
+  @include after-tablet {
+    padding-left: var(--container-x-padding);
+    padding-right: var(--container-x-padding);
+  }
+}
