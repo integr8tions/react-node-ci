@@ -49,6 +49,9 @@ Coverage:
 $ yarn test:coverage:unit
 ```
 
+### CI
+For PRs codeclimate and circleci CI tools have been setup
+
 ## Tests
 Components were written in a way so it would be easy to test them, state logic separate from the component (hooks in a subdirectory)
 
