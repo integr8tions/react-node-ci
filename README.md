@@ -27,7 +27,7 @@ $ yarn && yarn start
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### For production mode
-Environment variable "Node_ENV" has to be set to production, so it would serve build files
+Environment variable "Node_ENV" has to be set to "production", so it would serve build files
 ```bash
 $ yarn && yarn build && yarn start
 ```
