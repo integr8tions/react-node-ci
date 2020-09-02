@@ -7,7 +7,7 @@ Inspired by [create-react-app with a Node server on Heroku](https://github.com/m
 Express api merged with the necessary code for serving React frontend.<br />
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br />
-For state management [Recoil] was used (https://recoiljs.org/).<br />
+For state management [Recoil](https://recoiljs.org/) was used.<br />
 Styling done with SCSS.<br />
 
 
